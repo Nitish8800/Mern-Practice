@@ -8,4 +8,6 @@ router.get("/", (req, res) => {
 
 router.get("/list", userController.userList);
 
+router.get("/add", userController.userAdd);
+
 module.exports = router;

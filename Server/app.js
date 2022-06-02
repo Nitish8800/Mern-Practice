@@ -1,13 +1,19 @@
 const express = require("express");
 const app = express();
-const port = 8080;
+const dotenv = require("dotenv");
 const connectDB = require("./config/db");
 const userRoute = require("./routes/users");
-
+const path = require("path");
+dotenv.config({
+  path: path.join(__dirname, ".env"),
+});
 connectDB();
 
-app.use("/", userRoute);
+app.use("/users", userRoute);
 
-app.listen(port, () => {
-  console.log("server started at port: " + port);
+// console.log(process.env.PORT);
+const PORT = process.env.PORT;
+
+app.listen(PORT, () => {
+  console.log("server started at port: " + PORT);
 });

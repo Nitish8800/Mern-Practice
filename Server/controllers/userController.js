@@ -1,10 +1,15 @@
 const Users = require("../models/userModel");
 
 const userList = async (req, res) => {
+  let data = await Users.find();
 
-let data = await Users.find();
-
-  res.send("User List ");
+  res.json(data);
 };
 
-module.exports = { userList };
+// userAdd
+
+const userAdd = async (req, res) => {
+  res.json(200).json({ message: "ok" });
+};
+
+module.exports = { userList, userAdd };
