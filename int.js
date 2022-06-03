@@ -19,7 +19,8 @@ if(a==b)
 
   console.log(20+a+b)
 
-}else
+}
+else
 {
 
   console.log(30+a+b)
