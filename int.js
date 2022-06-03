@@ -19,5 +19,6 @@ else if(a===b){
 }
 else{
   console.log(30+a+b)
+  
 }
 console.log(1+"1")
