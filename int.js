@@ -16,10 +16,11 @@ if(a==b)
 {    console.log(10+a+b)}
 else if(a===b){
   console.log(20+a+b)
+  
 }
 
 else{
-  
+
   console.log(30+a+b)
 
 }
