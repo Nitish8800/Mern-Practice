@@ -9,7 +9,16 @@ const userList = async (req, res) => {
 // userAdd
 
 const userAdd = async (req, res) => {
-  res.json(200).json({ message: "ok" });
+  let { name, email, password, phoneNumber, pic } = req.body;
+  let data = await Users.create({
+    name,
+    email,
+    password,
+    phoneNumber,
+    pic,
+  });
+  console.log(req.body);
+  res.status(200).json({ message: "ok", data });
 };
 
 module.exports = { userList, userAdd };
